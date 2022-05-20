@@ -627,6 +627,7 @@ transform: translateY(0);
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+     padding: 40px;
 } 
 .backdrop-button{
     display: flex;
@@ -677,9 +678,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form{
     width: 448px;
-    margin: auto;
    display: block;
-    /* outline: 2px solid red; */
     margin-top: 12px;
 }
 .form-field{
@@ -694,8 +693,10 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     line-height: 14px;
     letter-spacing: 0.01em;
     text-align: left;
-color: #757575;
-;
+ color: var(--dark-color);
+}
+.form-field:nth-child(5){
+    margin-bottom:0;
 }
 .form-input{
     height: 40px;
@@ -736,7 +737,13 @@ color: #757575;
     letter-spacing: 0.03em;
     text-align: center;
 color: #212121;
-margin-top: 40px;
+margin:0;
+margin-bottom: 12px;
+
+}
+.form-button{
+     display: flex;
+     justify-content: center;
 }
 .button-form{
     height: 50px;
@@ -755,10 +762,7 @@ color: var(--primary-light);
 border:none;
 cursor: pointer;
 }
-.form-button{
-   display: flex;
-   justify-content: center;
-}
+
 .form-checkbox{
     margin-top: 20px;
     font-family: Roboto;
@@ -795,10 +799,13 @@ color: var(--primary-middle);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border:none;
-    cursor:pointer
+    cursor:pointer;
+}
+.footer-form-input__input{
+     padding: 15px;
 }
 .div-form{
-    margin-left: 93px;
+   margin-left: auto;
 }
 .footer-form-title{
     font-family: 'Roboto';
@@ -841,8 +848,9 @@ color: var(--primary-middle);
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
     outline: 0;
+    font-size: 12px;
+    color: var(--dark-color);
 }
 .modal-textarea:focus-within,
 .modal-textarea:hover{
@@ -893,4 +901,12 @@ color: var(--primary-middle);
 }
 .label-text{
     margin: 0;
+}
+.checkbox:focus-within+.checkbox-icon {
+    background-color: var(--accent-color);
+    background-origin: padding-box;
+    background-image: url('../images/vector1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-color: var(--accent-color);
 }
